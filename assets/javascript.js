@@ -1,8 +1,8 @@
 var button = document.querySelector('.button');
 var inputValue = document.querySelector('.inputValue');
 var cityName = document.querySelector('.name');
-var desc = document.querySelector('.desc');
-var temp = document.querySelector('.temp');
+var desc = document.querySelector('#desc');
+var cityTemp = document.querySelector('#temp-1');
 
 function locationApi(){
 
@@ -11,8 +11,10 @@ function locationApi(){
     //.then(data =>console.log(data))
     .then(data => {
         var nameValue = data['city']['name'];
+        var tempValue = data['list'][0]['main']['temp'];
 
         cityName.innerHTML = nameValue;
+        cityTemp.innerHTML = tempValue;
 
     })
 
