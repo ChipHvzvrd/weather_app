@@ -4,22 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/stylesheet.css">
     <title>Weather App</title>
 </head>
 <body>
-
-    <div class="userInput">
-        <input type="text" class="inputValue">
-        <input type="button" value="submit" class="button">
+<div class="container">
+    <div class="row justify-content-center" id="userInput">
+        <div class="col-md-12">
+            <input type="text" id="inputValue" class="border border-primary rounded">
+        </div>
+    </div>
+    <div class="row align-items-center">
+        <div class="col-md-12 text-center">
+            <input type="button" value="submit" id="subButton" class="btn btn-primary">
+        </div>
+    </div>
     </div>
     <div class="currentCity">
-        <h1 class="name"></h1>
+        <h1 id="nameCity"></h1>
     </div>
-    <div class="'row">
+    <div class="row">
         <div class="col-md-2" id="desc"></div>
         <div class="col-md-2" id="temp-1"></div>
+        <div class="col-md-2" id="temp-2"></div>
+        <div class="col-md-2" id="temp-3"></div>
+        <div class="col-md-2" id="temp-4"></div>
+        <div class="col-md-2" id="temp-5"></div>
     </div>
+
     <script src="./assets/javascript.js"></script>
 </body>
 </html>
