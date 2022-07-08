@@ -14,19 +14,19 @@ function locationApi(){
     .then(response => response.json())
     //.then(data =>console.log(data))
     .then(data => {
-        var nameValue = data['city']['name'] + ', '+ data['city']['country'];
-        var tempValueOne = data['list'][0]['main']['temp']  + '&#176;' + '<br>' + data['list'][0]['weather'][0]['description'] + '<br>' + data['list'][0]['weather'][0]['icon'];
-        var tempValueTwo = data['list'][1]['main']['temp']  + '&#176;' + '<br>' + data['list'][1]['weather'][0]['description'] + '<br>' + data['list'][0]['weather'][0]['icon'];
-        var tempValueThree = data['list'][2]['main']['temp']  + '&#176;' + '<br>' + data['list'][2]['weather'][0]['description'] + '<br>' + data['list'][0]['weather'][0]['icon'];
-        var tempValueFour = data['list'][3]['main']['temp']  + '&#176;' + '<br>' + data['list'][3]['weather'][0]['description'] + '<br>' + data['list'][0]['weather'][0]['icon'];
-        var tempValueFive = data['list'][4]['main']['temp']  + '&#176;' + '<br>' + data['list'][4]['weather'][0]['description'] + '<br>' + data['list'][0]['weather'][0]['icon'];
+        var nameValue = data['city']['name'] + ', '+ data['city']['country'] + '<br>' + data['cnt'];
+        var tempValueOne = data['list'][0]['dt_txt'] + '<br>' + 'Temp:' + data['list'][0]['main']['temp']  + '&#176;' + '<br>' + 'Humidity:' + data['list'][0]['main']['humidity'] + '%';
+        var tempValueTwo = data['list'][8]['dt_txt'] + '<br>' + 'Temp:' + data['list'][1]['main']['temp']  + '&#176;' + '<br>' + 'Humidity:' + data['list'][8]['main']['humidity'] + '%'; 
+        var tempValueThree = data['list'][16]['dt_txt'] + '<br>' + 'Temp:' + data['list'][2]['main']['temp']  + '&#176;' + '<br>' + 'Humidity:' + data['list'][16]['main']['humidity'] + '%';
+        var tempValueFour = data['list'][24]['dt_txt'] + '<br>' + 'Temp:' + data['list'][3]['main']['temp']  + '&#176;' + '<br>' + 'Humidity:' + data['list'][24]['main']['humidity'] + '%'; 
+        var tempValueFive = data['list'][32]['dt_txt'] + '<br>' + 'Temp:' + data['list'][4]['main']['temp']  + '&#176;' + '<br>' + 'Humidity:' + data['list'][32]['main']['humidity'] + '%';
 
         cityName.innerHTML = nameValue;
         dayOneTemp.innerHTML = tempValueOne;
-        dayTwoTemp.innerHTML = tempValueTwo  + '&#176;';
-        dayThreeTemp.innerHTML = tempValueThree  + '&#176;';
-        dayFourTemp.innerHTML = tempValueFour  + '&#176;';
-        dayFiveTemp.innerHTML = tempValueFive  + '&#176;';
+        dayTwoTemp.innerHTML = tempValueTwo;
+        dayThreeTemp.innerHTML = tempValueThree;
+        dayFourTemp.innerHTML = tempValueFour;
+        dayFiveTemp.innerHTML = tempValueFive;
 
     })
 
